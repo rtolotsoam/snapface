@@ -24,12 +24,12 @@ export class SingleFaceSnapComponent implements OnInit {
     
   }
 
-  onSnap() {
+  onSnap(faceSnapId: number) {
     if (this.buttonText === 'Oh Snap!') {
-      this.faceSnapsService.snapFaceSnapById(this.faceSnap.id, 'snap');
+      this.faceSnapsService.snapFaceSnapById(faceSnapId, 'snap');
       this.buttonText = 'Oops, unSnap!';
     } else {
-      this.faceSnapsService.snapFaceSnapById(this.faceSnap.id, 'unsnap');
+      this.faceSnapsService.snapFaceSnapById(faceSnapId, 'unsnap');
       this.buttonText = 'Oh Snap!';
     }
   }
